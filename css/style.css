@@ -1,1 +1,63 @@
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0d0f14;
+  color: white;
+  text-align: center;
+}
+
+/* Loading Screen */
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(#0d0f14, #1a1d25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plane {
+  width: 120px;
+  height: 120px;
+  background-image: url('../img/plane.png'); /* you will add this later */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fly 3s linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.loadingText {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Hide main content until loaded */
+.hidden {
+  display: none;
+}
+
+/* Main UI */
+#mainContent {
+  padding: 40px;
+}
+
+#searchBox {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#airportSelect {
+  padding: 10px;
+  font-size: 16px;
+  width: 260px;
+}
