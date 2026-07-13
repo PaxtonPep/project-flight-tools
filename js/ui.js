@@ -3,7 +3,6 @@ export function setupUI() {
     const projectFlightSection = document.getElementById("projectFlightSection");
     const ptfsSection = document.getElementById("ptfsSection");
 
-    // Default: PTFS visible
     projectFlightSection.classList.add("hidden");
     ptfsSection.classList.remove("hidden");
 
