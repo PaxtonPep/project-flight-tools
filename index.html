@@ -2,34 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Project Flight Tools</title>
+  <title>PTFS Flight Tools</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1>Project Flight Tools</h1>
+  <h1>PTFS Flight Tools</h1>
 
   <!-- Mode Selector -->
   <div class="card">
     <h2>Select Mode</h2>
     <label>
-      <input type="radio" name="mode" value="projectFlight" checked>
-      Project Flight
+      <input type="radio" name="mode" value="ptfs" checked>
+      PTFS Flight Tools
     </label>
     <label>
-      <input type="radio" name="mode" value="ptfs">
-      PTFS
+      <input type="radio" name="mode" value="projectFlight">
+      Project Flight (coming soon)
     </label>
-  </div>
-
-  <!-- Project Flight Section -->
-  <div id="projectFlightSection" class="card">
-    <h2>Project Flight Mode</h2>
-    <p>Project Flight tools will go here later.</p>
   </div>
 
   <!-- PTFS Section -->
-  <div id="ptfsSection" class="card hidden">
+  <div id="ptfsSection" class="card">
     <h2>PTFS Randomizer</h2>
 
     <!-- Flight Length -->
@@ -84,6 +78,12 @@
     <button id="generateBtn">Generate Flight</button>
 
     <div id="result" class="result"></div>
+  </div>
+
+  <!-- Project Flight Section -->
+  <div id="projectFlightSection" class="card hidden">
+    <h2>Project Flight Tools (coming soon)</h2>
+    <p>Project Flight features will be added later.</p>
   </div>
 
   <script src="js/app.js"></script>
