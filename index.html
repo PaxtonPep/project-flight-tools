@@ -7,35 +7,83 @@
 </head>
 <body>
 
-  <!-- Loading Screen -->
-  <div id="loadingScreen">
-    <div class="plane"></div>
-    <p class="loadingText">PRELOADING CORE ASSETS...</p>
+  <h1>Project Flight Tools</h1>
+
+  <!-- Mode Selector -->
+  <div class="card">
+    <h2>Select Mode</h2>
+    <label>
+      <input type="radio" name="mode" value="projectFlight" checked>
+      Project Flight
+    </label>
+    <label>
+      <input type="radio" name="mode" value="ptfs">
+      PTFS
+    </label>
   </div>
 
-  <!-- Main Content -->
-  <div id="mainContent" class="hidden">
-    <h1>Project Flight Airport Selector</h1>
+  <!-- Project Flight Section -->
+  <div id="projectFlightSection" class="card">
+    <h2>Project Flight Mode</h2>
+    <p>Project Flight tools will go here later.</p>
+  </div>
 
-    <input type="text" id="searchBox" placeholder="Search airport...">
+  <!-- PTFS Section -->
+  <div id="ptfsSection" class="card hidden">
+    <h2>PTFS Randomizer</h2>
 
-    <select id="airportSelect">
-      <option value="LCLK">Larnaca (LCLK)</option>
-      <option value="LCPH">Paphos (LCPH)</option>
-      <option value="LCRA">RAF Akrotiri (LCRA)</option>
-      <option value="MDAB">Arroyo Barril (MDAB)</option>
-      <option value="MDCR">Cabo Rojo (MDCR)</option>
-      <option value="MDST">Cibao (MDST)</option>
-      <option value="MDPC">Punta Cana (MDPC)</option>
-      <option value="EFKT">Kittilä (EFKT)</option>
-      <option value="MTCA">Antoine-Simon (MTCA)</option>
-      <option value="GCLP">Gran Canaria (GCLP)</option>
-      <option value="LEMH">Menorca (LEMH)</option>
-      <option value="EGKK">Gatwick (EGKK)</option>
-      <option value="EGHI">Southampton (EGHI)</option>
-    </select>
+    <!-- Flight Length -->
+    <div class="section">
+      <h3>Flight Length</h3>
+      <select id="flightLength">
+        <option value="any">Any</option>
+        <option value="short">Short</option>
+        <option value="medium">Medium</option>
+        <option value="long">Long</option>
+      </select>
+    </div>
 
-    <p id="selectedAirport"></p>
+    <!-- Airport Constraints -->
+    <div class="section">
+      <h3>Airport Constraints</h3>
+      <label>Include airport:
+        <input type="text" id="includeAirport" placeholder="IRFD, ILAR, SABA">
+      </label>
+      <label>Must depart from:
+        <input type="text" id="departAirport">
+      </label>
+      <label>Must arrive at:
+        <input type="text" id="arriveAirport">
+      </label>
+      <label>
+        <input type="checkbox" id="allowLayover" checked>
+        Allow layover
+      </label>
+    </div>
+
+    <!-- Gamepasses -->
+    <div class="section">
+      <h3>Gamepasses</h3>
+      <label><input type="checkbox" class="gamepass" value="coastGuard" checked> Coast Guard</label>
+      <label><input type="checkbox" class="gamepass" value="presidential" checked> Presidential</label>
+      <label><input type="checkbox" class="gamepass" value="privateJets" checked> Private Jets</label>
+      <label><input type="checkbox" class="gamepass" value="military" checked> Military</label>
+    </div>
+
+    <!-- Aircraft Categories -->
+    <div class="section">
+      <h3>Aircraft Categories</h3>
+      <label><input type="checkbox" class="category" value="airliner" checked> Airliners</label>
+      <label><input type="checkbox" class="category" value="cargo" checked> Cargo</label>
+      <label><input type="checkbox" class="category" value="ga" checked> GA</label>
+      <label><input type="checkbox" class="category" value="military" checked> Military</label>
+      <label><input type="checkbox" class="category" value="oldMilitary" checked> Old Military</label>
+      <label><input type="checkbox" class="category" value="modernMilitary" checked> Modern Military</label>
+    </div>
+
+    <button id="generateBtn">Generate Flight</button>
+
+    <div id="result" class="result"></div>
   </div>
 
   <script src="js/app.js"></script>
