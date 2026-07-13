@@ -1,0 +1,22 @@
+export const airports = [
+    { id: "IRFD", name: "Isles of Rodfield" },
+    { id: "ILAR", name: "Larson" },
+    { id: "SABA", name: "Juancho Yrausquin" },
+    { id: "GRVY", name: "Gravely" },
+    { id: "NEWH", name: "Newark" },
+    { id: "COVE", name: "Cove" },
+    { id: "SKYC", name: "Skycrest" },
+    { id: "MILB", name: "Milbry" },
+    { id: "SAND", name: "Sandy Island" },
+    { id: "WIND", name: "Windsor" },
+    { id: "SEQU", name: "Sequoia" },
+    { id: "BRAV", name: "Brava" },
+    { id: "MELB", name: "Melbourne" },
+    { id: "TOKY", name: "Tokyo" },
+    { id: "PERL", name: "Perth" },
+    { id: "LOND", name: "London" },
+    { id: "DUBI", name: "Dubai" },
+    { id: "CAIR", name: "Cairo" },
+    { id: "MOSC", name: "Moscow" },
+    { id: "SYDN", name: "Sydney" }
+];
