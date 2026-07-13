@@ -1,91 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>PTFS Flight Tools</title>
-  <link rel="stylesheet" href="css/style.css">
+    <title>Project Flight + PTFS Tool</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>PTFS Flight Tools</h1>
+<h1>Project Flight + PTFS Tool</h1>
 
-  <!-- Mode Selector -->
-  <div class="card">
-    <h2>Select Mode</h2>
-    <label>
-      <input type="radio" name="mode" value="ptfs" checked>
-      PTFS Flight Tools
-    </label>
-    <label>
-      <input type="radio" name="mode" value="projectFlight">
-      Project Flight (coming soon)
-    </label>
-  </div>
+<section>
+    <label><input type="radio" name="mode" value="ptfs" checked> PTFS Mode</label>
+    <label><input type="radio" name="mode" value="project"> Project Flight Mode</label>
+</section>
 
-  <!-- PTFS Section -->
-  <div id="ptfsSection" class="card">
-    <h2>PTFS Randomizer</h2>
+<section id="ptfsSection">
+    <button id="generateBtn">Generate PTFS Flight</button>
+    <div id="result"></div>
+</section>
 
-    <!-- Flight Length -->
-    <div class="section">
-      <h3>Flight Length</h3>
-      <select id="flightLength">
-        <option value="any">Any</option>
-        <option value="short">Short</option>
-        <option value="medium">Medium</option>
-        <option value="long">Long</option>
-      </select>
-    </div>
+<section id="projectFlightSection" class="hidden">
+    <p>Project Flight stuff goes here.</p>
+</section>
 
-    <!-- Airport Constraints -->
-    <div class="section">
-      <h3>Airport Constraints</h3>
-      <label>Include airport:
-        <input type="text" id="includeAirport" placeholder="IRFD, ILAR, SABA">
-      </label>
-      <label>Must depart from:
-        <input type="text" id="departAirport">
-      </label>
-      <label>Must arrive at:
-        <input type="text" id="arriveAirport">
-      </label>
-      <label>
-        <input type="checkbox" id="allowLayover" checked>
-        Allow layover
-      </label>
-    </div>
-
-    <!-- Gamepasses -->
-    <div class="section">
-      <h3>Gamepasses</h3>
-      <label><input type="checkbox" class="gamepass" value="coastGuard" checked> Coast Guard</label>
-      <label><input type="checkbox" class="gamepass" value="presidential" checked> Presidential</label>
-      <label><input type="checkbox" class="gamepass" value="privateJets" checked> Private Jets</label>
-      <label><input type="checkbox" class="gamepass" value="military" checked> Military</label>
-    </div>
-
-    <!-- Aircraft Categories -->
-    <div class="section">
-      <h3>Aircraft Categories</h3>
-      <label><input type="checkbox" class="category" value="airliner" checked> Airliners</label>
-      <label><input type="checkbox" class="category" value="cargo" checked> Cargo</label>
-      <label><input type="checkbox" class="category" value="ga" checked> GA</label>
-      <label><input type="checkbox" class="category" value="military" checked> Military</label>
-      <label><input type="checkbox" class="category" value="oldMilitary" checked> Old Military</label>
-      <label><input type="checkbox" class="category" value="modernMilitary" checked> Modern Military</label>
-    </div>
-
-    <button id="generateBtn">Generate Flight</button>
-
-    <div id="result" class="result"></div>
-  </div>
-
-  <!-- Project Flight Section -->
-  <div id="projectFlightSection" class="card hidden">
-    <h2>Project Flight Tools (coming soon)</h2>
-    <p>Project Flight features will be added later.</p>
-  </div>
-
-  <script src="js/app.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>
