@@ -1,21 +1,73 @@
 export const airports = [
+  // --- BIG RED HUBS (ANY PLANE) ---
+
   {
     id: "IRFD",
     name: "Greater Rockford",
     color: "red",
-    maxSize: "heavy",              // any plane
+    maxSize: "a380",
     allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
-    requiresGamepass: [],          // none
+    requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
     allowModernMilitary: true
   },
 
   {
+    id: "ILAR",
+    name: "Larnaca International",
+    color: "red",
+    maxSize: "a380",
+    allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
+    requiresGamepass: [],
+    onlyHeli: false,
+    onlySeaplane: false,
+    allowModernMilitary: true
+  },
+
+  {
+    id: "IZOL_INTL",
+    name: "Izolirani International",
+    color: "red",
+    maxSize: "a380",
+    allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
+    requiresGamepass: [],
+    onlyHeli: false,
+    onlySeaplane: false,
+    allowModernMilitary: true
+  },
+
+  {
+    id: "KEF_INTL",
+    name: "Keflavik International",
+    color: "red",
+    maxSize: "a380",
+    allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
+    requiresGamepass: [],
+    onlyHeli: false,
+    onlySeaplane: false,
+    allowModernMilitary: true
+  },
+
+  {
+    id: "ITKO",
+    name: "Tokyo International",
+    color: "red",
+    maxSize: "a380",
+    allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
+    requiresGamepass: [],
+    onlyHeli: false,
+    onlySeaplane: false,
+    allowModernMilitary: true
+  },
+
+  // --- ORANGE MEDIUM/LARGE AIRPORTS ---
+
+  {
     id: "IMLR",
     name: "Mellor International",
     color: "orange",
-    maxSize: "777",                // no 747 / A380
+    maxSize: "b777", // biggest allowed: 777, no 747/A380
     allowedCategories: ["airliner", "ga", "cargo"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -27,19 +79,19 @@ export const airports = [
     id: "ISAU",
     name: "Sauthamptona",
     color: "orange",
-    maxSize: "757",                // biggest from your list
+    maxSize: "b757", // biggest: 757/707/727/C130
     allowedCategories: ["airliner", "ga", "cargo", "military"],
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
-    allowModernMilitary: false     // no F‑22 etc.
+    allowModernMilitary: false
   },
 
   {
     id: "IPAP",
     name: "Paphos International",
     color: "orange",
-    maxSize: "777",
+    maxSize: "b777",
     allowedCategories: ["airliner", "ga", "cargo"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -51,31 +103,33 @@ export const airports = [
     id: "IBTH",
     name: "Saint Barthelemy",
     color: "orange",
-    maxSize: "q400",               // “biggest” turboprop from your list
+    maxSize: "q400", // biggest: CRJ700/Q400/ATR72
     allowedCategories: ["airliner", "ga"],
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
-    allowModernMilitary: false     // no modern military
+    allowModernMilitary: false // no modern military
   },
 
+  // --- LIGHT BLUE SMALL STRIPS / SPECIALS ---
+
   {
-    id: "IJAF",
-    name: "Al Najaf",
+    id: "ISAB",
+    name: "Saba Airport",
     color: "lightBlue",
-    maxSize: "q400",               // same as Saint Barts
-    allowedCategories: ["airliner", "ga", "military"],
+    maxSize: "kingair260", // or Vision Jet
+    allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
-    allowModernMilitary: true
+    allowModernMilitary: false
   },
 
   {
     id: "ILUK",
     name: "Lukla",
     color: "lightBlue",
-    maxSize: "learjet",            // or P‑38
+    maxSize: "learjet", // or P-38
     allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -87,19 +141,7 @@ export const airports = [
     id: "ISKP",
     name: "Skepelos Airfield",
     color: "lightBlue",
-    maxSize: "learjet",            // same as Lukla
-    allowedCategories: ["ga", "oldMilitary"],
-    requiresGamepass: [],
-    onlyHeli: false,
-    onlySeaplane: false,
-    allowModernMilitary: false
-  },
-
-  {
-    id: "ISAB",
-    name: "Saba Airport",
-    color: "lightBlue",
-    maxSize: "kingair260",         // or Vision Jet
+    maxSize: "learjet", // same as Lukla
     allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -111,7 +153,7 @@ export const airports = [
     id: "IBLT",
     name: "Blotic Airfield",
     color: "lightBlue",
-    maxSize: "kingair260",         // same as Saba
+    maxSize: "kingair260", // same as Saba
     allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -123,7 +165,7 @@ export const airports = [
     id: "IHEN",
     name: "Henstridge Airfield",
     color: "lightBlue",
-    maxSize: "kingair260",         // same as Saba
+    maxSize: "kingair260", // same as Saba
     allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -135,12 +177,24 @@ export const airports = [
     id: "IBAR",
     name: "Barra Airport",
     color: "lightBlue",
-    maxSize: "kingair260",         // same as Saba
+    maxSize: "kingair260", // same as Saba
     allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
     allowModernMilitary: false
+  },
+
+  {
+    id: "IJAF",
+    name: "Al Najaf",
+    color: "lightBlue",
+    maxSize: "q400", // same as Saint Barts
+    allowedCategories: ["airliner", "ga", "military"],
+    requiresGamepass: [],
+    onlyHeli: false,
+    onlySeaplane: false,
+    allowModernMilitary: true // can spawn military
   },
 
   {
@@ -152,8 +206,10 @@ export const airports = [
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
-    allowModernMilitary: false
+    allowModernMilitary: false // ONLY C172
   },
+
+  // --- DARK BLUE COAST GUARD HELIPORTS ---
 
   {
     id: "OREN",
@@ -204,6 +260,20 @@ export const airports = [
   },
 
   {
+    id: "IZOL_CG",
+    name: "Izolirani Coast Guard",
+    color: "darkBlue",
+    maxSize: "heli",
+    allowedCategories: ["heli"],
+    requiresGamepass: ["coastGuard"],
+    onlyHeli: true,
+    onlySeaplane: false,
+    allowModernMilitary: false
+  },
+
+  // --- DARK BLUE SEAPLANE BASES ---
+
+  {
     id: "TAV_SEA",
     name: "Tavaro Seabase",
     color: "darkBlue",
@@ -240,22 +310,24 @@ export const airports = [
   },
 
   {
-    id: "MCON",
-    name: "McConnell AFB",
+    id: "PING",
+    name: "Pingeyri",
     color: "darkBlue",
-    maxSize: "heavy",
-    allowedCategories: ["military", "heli"],
+    maxSize: "kingair260", // same as Saba
+    allowedCategories: ["ga", "oldMilitary"],
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
-    allowModernMilitary: true
+    allowModernMilitary: false
   },
+
+  // --- DARK BLUE MILITARY BASES / CARRIERS ---
 
   {
     id: "USS_GER",
     name: "USS Gerald R. Ford",
     color: "darkBlue",
-    maxSize: "medium",
+    maxSize: "b757", // medium-ish
     allowedCategories: ["military", "heli"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -267,7 +339,7 @@ export const airports = [
     id: "HMS_QE",
     name: "HMS Queen Elizabeth",
     color: "darkBlue",
-    maxSize: "medium",
+    maxSize: "b757",
     allowedCategories: ["military", "heli"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -279,7 +351,7 @@ export const airports = [
     id: "IGAR",
     name: "Airbase Garry",
     color: "darkBlue",
-    maxSize: "heavy",
+    maxSize: "c17", // big military
     allowedCategories: ["military", "heli"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -291,7 +363,7 @@ export const airports = [
     id: "ISCM",
     name: "RAF Scampton",
     color: "darkBlue",
-    maxSize: "medium",
+    maxSize: "b757",
     allowedCategories: ["military", "heli"],
     requiresGamepass: [],
     onlyHeli: false,
@@ -300,35 +372,11 @@ export const airports = [
   },
 
   {
-    id: "IZOL_CG",
-    name: "Izolirani Coast Guard",
+    id: "IIAB",
+    name: "McConnell AFB",
     color: "darkBlue",
-    maxSize: "heli",
-    allowedCategories: ["heli"],
-    requiresGamepass: ["coastGuard"],
-    onlyHeli: true,
-    onlySeaplane: false,
-    allowModernMilitary: false
-  },
-
-  {
-    id: "IZOL_INTL",
-    name: "Izolirani International",
-    color: "red",
-    maxSize: "heavy",
-    allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
-    requiresGamepass: [],
-    onlyHeli: false,
-    onlySeaplane: false,
-    allowModernMilitary: true
-  },
-
-  {
-    id: "KEF_INTL",
-    name: "Keflavik International",
-    color: "red",
-    maxSize: "heavy",
-    allowedCategories: ["airliner", "ga", "cargo", "military", "heli", "seaplane"],
+    maxSize: "c17",
+    allowedCategories: ["military", "heli"],
     requiresGamepass: [],
     onlyHeli: false,
     onlySeaplane: false,
