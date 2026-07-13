@@ -8,9 +8,17 @@
 
 <h1>Project Flight + PTFS Tool</h1>
 
-<section>
+<section class="mode-select">
     <label><input type="radio" name="mode" value="ptfs" checked> PTFS Mode</label>
     <label><input type="radio" name="mode" value="project"> Project Flight Mode</label>
+</section>
+
+<section class="gamepasses">
+    <h2>Gamepasses</h2>
+    <label><input type="checkbox" class="gamepass" value="coastGuard" checked> Coast Guard</label>
+    <label><input type="checkbox" class="gamepass" value="f35" checked> F‑35</label>
+    <label><input type="checkbox" class="gamepass" value="sr71" checked> SR‑71</label>
+    <label><input type="checkbox" class="gamepass" value="privateJets" checked> Private Jets</label>
 </section>
 
 <section id="ptfsSection">
@@ -19,7 +27,7 @@
 </section>
 
 <section id="projectFlightSection" class="hidden">
-    <p>Project Flight stuff goes here.</p>
+    <p>Project Flight features will go here.</p>
 </section>
 
 <script type="module" src="app.js"></script>
