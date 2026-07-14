@@ -14,21 +14,21 @@
     <!-- Aircraft Selector -->
     <div class="section">
       <h2>Select Aircraft</h2>
-      <input type="text" class="search" placeholder="Search aircraft...">
+      <input type="text" id="aircraft-search" class="search" placeholder="Search aircraft...">
       <div id="aircraft-list" class="list"></div>
     </div>
 
     <!-- From Airport -->
     <div class="section">
       <h2>From Airport</h2>
-      <input type="text" class="search" placeholder="Search airports...">
+      <input type="text" id="from-search" class="search" placeholder="Search airports...">
       <div id="from-list" class="list"></div>
     </div>
 
     <!-- To Airport -->
     <div class="section">
       <h2>To Airport</h2>
-      <input type="text" class="search" placeholder="Search airports...">
+      <input type="text" id="to-search" class="search" placeholder="Search airports...">
       <div id="to-list" class="list"></div>
     </div>
 
@@ -50,9 +50,7 @@
 
   </div>
 
-  <script src="ui.js"></script>
-  <script src="filters.js"></script>
-  <script src="randomizer.js"></script>
-  <script src="app.js"></script>
+  <script type="module" src="ui.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
