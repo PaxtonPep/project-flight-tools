@@ -1,20 +1,20 @@
-export function setupUI() {
-    const modeRadios = document.querySelectorAll("input[name='mode']");
-    const projectFlightSection = document.getElementById("projectFlightSection");
-    const ptfsSection = document.getElementById("ptfsSection");
+// Open/close dropdown menus
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const menu = btn.nextElementSibling;
+    const open = menu.style.display === 'block';
 
-    projectFlightSection.classList.add("hidden");
-    ptfsSection.classList.remove("hidden");
+    // Close all menus
+    document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
 
-    modeRadios.forEach(radio => {
-        radio.addEventListener("change", () => {
-            if (radio.value === "ptfs") {
-                ptfsSection.classList.remove("hidden");
-                projectFlightSection.classList.add("hidden");
-            } else {
-                ptfsSection.classList.add("hidden");
-                projectFlightSection.classList.remove("hidden");
-            }
-        });
-    });
-}
+    // Toggle this one
+    menu.style.display = open ? 'none' : 'block';
+  });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+  }
+});
