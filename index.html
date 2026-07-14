@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PTFS Aircraft Selector</title>
+  <title>PTFS Flight Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>PTFS Aircraft & Airport Selector</h1>
+  <h1>PTFS Flight Generator</h1>
 
-  <div class="selector-container">
+  <div class="panel">
 
-    <!-- Aircraft Dropdown -->
-    <div class="dropdown">
-      <button class="dropdown-btn">Choose Aircraft ▼</button>
-      <div class="dropdown-menu">
-        <label><input type="checkbox" value="cessna172"> Cessna 172</label>
-        <label><input type="checkbox" value="kingair260"> King Air 260</label>
-        <label><input type="checkbox" value="a350"> Airbus A350</label>
-        <label><input type="checkbox" value="b787"> Boeing 787</label>
-        <label><input type="checkbox" value="beluga"> Airbus Beluga</label>
-        <label><input type="checkbox" value="caravan"> Cessna Caravan Cargo</label>
-        <label><input type="checkbox" value="c17"> C-17 Globemaster</label>
-        <label><input type="checkbox" value="c40"> C-40 Clipper</label>
-        <label><input type="checkbox" value="c32"> C-32</label>
-        <label><input type="checkbox" value="vc25"> VC-25 (Air Force One)</label>
-        <label><input type="checkbox" value="p38"> P-38 Lightning</label>
-        <label><input type="checkbox" value="sr71"> SR-71 Blackbird</label>
-      </div>
+    <!-- Aircraft Selector -->
+    <div class="section">
+      <h2>Select Aircraft</h2>
+      <input type="text" class="search" placeholder="Search aircraft...">
+      <div id="aircraft-list" class="list"></div>
     </div>
 
-    <!-- From Airport Dropdown -->
-    <div class="dropdown">
-      <button class="dropdown-btn">From Airport ▼</button>
-      <div class="dropdown-menu">
-        <label><input type="checkbox" value="larnaca"> Larnaca</label>
-        <label><input type="checkbox" value="perth"> Perth International</label>
-        <label><input type="checkbox" value="keflavik"> Keflavik</label>
-        <label><input type="checkbox" value="pingeyri"> Pingeyri</label>
-        <label><input type="checkbox" value="mellor"> Mellor</label>
-        <label><input type="checkbox" value="training"> Training Center</label>
-        <label><input type="checkbox" value="garry"> Airbase Garry</label>
-        <label><input type="checkbox" value="mcconnell"> McConnell</label>
-        <label><input type="checkbox" value="scampton"> RAF Scampton</label>
-        <label><input type="checkbox" value="barra"> Barra</label>
-      </div>
+    <!-- From Airport -->
+    <div class="section">
+      <h2>From Airport</h2>
+      <input type="text" class="search" placeholder="Search airports...">
+      <div id="from-list" class="list"></div>
     </div>
 
-    <!-- To Airport Dropdown -->
-    <div class="dropdown">
-      <button class="dropdown-btn">To Airport ▼</button>
-      <div class="dropdown-menu">
-        <label><input type="checkbox" value="larnaca"> Larnaca</label>
-        <label><input type="checkbox" value="perth"> Perth International</label>
-        <label><input type="checkbox" value="keflavik"> Keflavik</label>
-        <label><input type="checkbox" value="pingeyri"> Pingeyri</label>
-        <label><input type="checkbox" value="mellor"> Mellor</label>
-        <label><input type="checkbox" value="training"> Training Center</label>
-        <label><input type="checkbox" value="garry"> Airbase Garry</label>
-        <label><input type="checkbox" value="mcconnell"> McConnell</label>
-        <label><input type="checkbox" value="scampton"> RAF Scampton</label>
-        <label><input type="checkbox" value="barra"> Barra</label>
-      </div>
+    <!-- To Airport -->
+    <div class="section">
+      <h2>To Airport</h2>
+      <input type="text" class="search" placeholder="Search airports...">
+      <div id="to-list" class="list"></div>
     </div>
+
+    <!-- Gamepass Selector -->
+    <div class="section">
+      <h2>Gamepasses</h2>
+      <label><input type="checkbox" id="gp-military"> Military</label>
+      <label><input type="checkbox" id="gp-cargo"> Cargo</label>
+      <label><input type="checkbox" id="gp-heli"> Helicopter</label>
+      <label><input type="checkbox" id="gp-seaplane"> Seaplane</label>
+      <label><input type="checkbox" id="gp-vip"> VIP</label>
+    </div>
+
+    <!-- Generate Button -->
+    <button id="generate-btn">Generate Random Flight</button>
+
+    <!-- Output -->
+    <div id="output"></div>
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="ui.js"></script>
+  <script src="filters.js"></script>
+  <script src="randomizer.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
