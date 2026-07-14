@@ -1,20 +1,32 @@
-// Open/close dropdown menus
-document.querySelectorAll('.dropdown-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const menu = btn.nextElementSibling;
-    const open = menu.style.display === 'block';
+import { aircraft } from "./aircraft.js";
+import { airports } from "./airports.js";
 
-    // Close all menus
-    document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+function populateList(elementId, items) {
+  const container = document.getElementById(elementId);
+  container.innerHTML = "";
 
-    // Toggle this one
-    menu.style.display = open ? 'none' : 'block';
+  items.forEach(item => {
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="checkbox" value="${item.id}"> ${item.name}`;
+    container.appendChild(label);
   });
-});
+}
 
-// Close dropdowns when clicking outside
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.dropdown')) {
-    document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
-  }
+populateList("aircraft-list", aircraft);
+populateList("from-list", airports);
+populateList("to-list", airports);
+
+// Search filters
+document.querySelectorAll(".search").forEach((searchBox, index) => {
+  const listId = ["aircraft-list", "from-list", "to-list"][index];
+  const list = document.getElementById(listId);
+
+  searchBox.addEventListener("input", () => {
+    const term = searchBox.value.toLowerCase();
+    list.querySelectorAll("label").forEach(label => {
+      label.style.display = label.innerText.toLowerCase().includes(term)
+        ? "block"
+        : "none";
+    });
+  });
 });
