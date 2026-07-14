@@ -1,13 +1,15 @@
-export function filterByGamepass(aircraft, passes) {
-    return aircraft.filter(a =>
-        !a.gamepass.length || a.gamepass.some(g => passes.includes(g))
-    );
-}
+import { aircraft } from "./aircraft.js";
 
-export function filterByCategory(aircraft, category) {
-    return aircraft.filter(a => a.category === category);
-}
+export function filterAircraftByGamepass(selected, gp) {
+  return selected.filter(id => {
+    const plane = aircraft.find(a => a.id === id);
 
-export function filterBySize(aircraft, size) {
-    return aircraft.filter(a => a.size === size);
+    if (plane.category === "military" && !gp.military) return false;
+    if (plane.category === "cargo" && !gp.cargo) return false;
+    if (plane.category === "heli" && !gp.heli) return false;
+    if (plane.category === "seaplane" && !gp.seaplane) return false;
+    if (plane.category === "vip" && !gp.vip) return false;
+
+    return true;
+  });
 }
