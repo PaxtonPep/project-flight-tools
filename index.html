@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project Flight + PTFS Tool</title>
-    <link rel="stylesheet" href="style.css">
+  <title>PTFS Aircraft Selector</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Project Flight + PTFS Tool</h1>
+  <h1>PTFS Aircraft & Airport Selector</h1>
 
-<section class="mode-select">
-    <label><input type="radio" name="mode" value="ptfs" checked> PTFS Mode</label>
-    <label><input type="radio" name="mode" value="project"> Project Flight Mode</label>
-</section>
+  <div class="selector-container">
 
-<section class="gamepasses">
-    <h2>Gamepasses</h2>
-    <label><input type="checkbox" class="gamepass" value="coastGuard" checked> Coast Guard</label>
-    <label><input type="checkbox" class="gamepass" value="f35" checked> F‑35</label>
-    <label><input type="checkbox" class="gamepass" value="sr71" checked> SR‑71</label>
-    <label><input type="checkbox" class="gamepass" value="privateJets" checked> Private Jets</label>
-</section>
+    <!-- Aircraft Dropdown -->
+    <div class="dropdown">
+      <button class="dropdown-btn">Choose Aircraft ▼</button>
+      <div class="dropdown-menu">
+        <label><input type="checkbox" value="cessna172"> Cessna 172</label>
+        <label><input type="checkbox" value="kingair260"> King Air 260</label>
+        <label><input type="checkbox" value="a350"> Airbus A350</label>
+        <label><input type="checkbox" value="b787"> Boeing 787</label>
+        <label><input type="checkbox" value="beluga"> Airbus Beluga</label>
+        <label><input type="checkbox" value="caravan"> Cessna Caravan Cargo</label>
+        <label><input type="checkbox" value="c17"> C-17 Globemaster</label>
+        <label><input type="checkbox" value="c40"> C-40 Clipper</label>
+        <label><input type="checkbox" value="c32"> C-32</label>
+        <label><input type="checkbox" value="vc25"> VC-25 (Air Force One)</label>
+        <label><input type="checkbox" value="p38"> P-38 Lightning</label>
+        <label><input type="checkbox" value="sr71"> SR-71 Blackbird</label>
+      </div>
+    </div>
 
-<section id="ptfsSection">
-    <button id="generateBtn">Generate PTFS Flight</button>
-    <div id="result"></div>
-</section>
+    <!-- From Airport Dropdown -->
+    <div class="dropdown">
+      <button class="dropdown-btn">From Airport ▼</button>
+      <div class="dropdown-menu">
+        <label><input type="checkbox" value="larnaca"> Larnaca</label>
+        <label><input type="checkbox" value="perth"> Perth International</label>
+        <label><input type="checkbox" value="keflavik"> Keflavik</label>
+        <label><input type="checkbox" value="pingeyri"> Pingeyri</label>
+        <label><input type="checkbox" value="mellor"> Mellor</label>
+        <label><input type="checkbox" value="training"> Training Center</label>
+        <label><input type="checkbox" value="garry"> Airbase Garry</label>
+        <label><input type="checkbox" value="mcconnell"> McConnell</label>
+        <label><input type="checkbox" value="scampton"> RAF Scampton</label>
+        <label><input type="checkbox" value="barra"> Barra</label>
+      </div>
+    </div>
 
-<section id="projectFlightSection" class="hidden">
-    <p>Project Flight features will go here.</p>
-</section>
+    <!-- To Airport Dropdown -->
+    <div class="dropdown">
+      <button class="dropdown-btn">To Airport ▼</button>
+      <div class="dropdown-menu">
+        <label><input type="checkbox" value="larnaca"> Larnaca</label>
+        <label><input type="checkbox" value="perth"> Perth International</label>
+        <label><input type="checkbox" value="keflavik"> Keflavik</label>
+        <label><input type="checkbox" value="pingeyri"> Pingeyri</label>
+        <label><input type="checkbox" value="mellor"> Mellor</label>
+        <label><input type="checkbox" value="training"> Training Center</label>
+        <label><input type="checkbox" value="garry"> Airbase Garry</label>
+        <label><input type="checkbox" value="mcconnell"> McConnell</label>
+        <label><input type="checkbox" value="scampton"> RAF Scampton</label>
+        <label><input type="checkbox" value="barra"> Barra</label>
+      </div>
+    </div>
 
-<script type="module" src="app.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
