@@ -1,4 +1,9 @@
 export const airports = [
+
+  // ─────────────────────────────────────────────
+  // LARGE INTERNATIONALS
+  // ─────────────────────────────────────────────
+
   {
     id: "larnaca",
     name: "Larnaca",
@@ -10,6 +15,7 @@ export const airports = [
     maxSeaplane: 10,
     blocksModernMilitary: false
   },
+
   {
     id: "perth",
     name: "Perth International",
@@ -21,6 +27,7 @@ export const airports = [
     maxSeaplane: 10,
     blocksModernMilitary: false
   },
+
   {
     id: "keflavik",
     name: "Keflavik",
@@ -32,50 +39,75 @@ export const airports = [
     maxSeaplane: 10,
     blocksModernMilitary: false
   },
+
+  // ─────────────────────────────────────────────
+  // SMALL / SPECIAL AIRPORTS
+  // ─────────────────────────────────────────────
+
   {
     id: "pingeyri",
     name: "Pingeyri",
     maxAirliner: 0,
-    maxCargo: 2,   // Caravan cargo
+    maxCargo: 2,       // Caravan Cargo
     maxGA: 10,
-    maxMilitary: 3, // P-38 max
+    maxMilitary: 3,    // P-38 tier
     maxHeli: 10,
     maxSeaplane: 10,
     blocksModernMilitary: true
   },
+
+  {
+    id: "barra",
+    name: "Barra",
+    maxAirliner: 0,
+    maxCargo: 0,
+    maxGA: 2,          // Twin Otter / Caravan
+    maxMilitary: 0,
+    maxHeli: 10,
+    maxSeaplane: 10,
+    blocksModernMilitary: true
+  },
+
+  // ─────────────────────────────────────────────
+  // CUSTOM AIRPORTS YOU DEFINED
+  // ─────────────────────────────────────────────
+
   {
     id: "mellor",
     name: "Mellor",
-    maxAirliner: 8,  // A350
-    maxCargo: 7,     // Beluga-ish tier
+    maxAirliner: 8,    // A350
+    maxCargo: 7,       // A330F / Beluga tier
     maxGA: 10,
-    maxMilitary: 8,  // C-17
+    maxMilitary: 8,    // C-17
     maxHeli: 10,
     maxSeaplane: 10,
     blocksModernMilitary: false
   },
+
   {
     id: "training",
     name: "Training Center",
     maxAirliner: 0,
     maxCargo: 0,
-    maxGA: 1,   // C172 only
+    maxGA: 1,          // C172 only
     maxMilitary: 0,
     maxHeli: 0,
     maxSeaplane: 0,
     blocksModernMilitary: true
   },
+
   {
     id: "garry",
     name: "Airbase Garry",
     maxAirliner: 0,
     maxCargo: 0,
     maxGA: 0,
-    maxMilitary: 8, // C-17 / SR-71 tier
+    maxMilitary: 8,    // C-17 / SR-71 tier
     maxHeli: 10,
     maxSeaplane: 0,
     blocksModernMilitary: false
   },
+
   {
     id: "mcconnell",
     name: "McConnell",
@@ -87,26 +119,17 @@ export const airports = [
     maxSeaplane: 0,
     blocksModernMilitary: false
   },
+
   {
     id: "scampton",
     name: "RAF Scampton",
     maxAirliner: 0,
     maxCargo: 0,
     maxGA: 10,
-    maxMilitary: 7,
+    maxMilitary: 7,    // Vulcan / B-29 tier
     maxHeli: 10,
     maxSeaplane: 0,
     blocksModernMilitary: true
-  },
-  {
-    id: "barra",
-    name: "Barra",
-    maxAirliner: 0,
-    maxCargo: 0,
-    maxGA: 2,
-    maxMilitary: 0,
-    maxHeli: 10,
-    maxSeaplane: 10,
-    blocksModernMilitary: true
   }
+
 ];
